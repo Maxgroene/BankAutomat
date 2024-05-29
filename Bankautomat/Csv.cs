@@ -27,7 +27,6 @@ namespace Bankautomat
                 }
             }
         }
-
         public void Write(string tempNotiz)
         {
             try
@@ -35,6 +34,36 @@ namespace Bankautomat
                 using (StreamWriter writer = new StreamWriter(fileName, true, Encoding.UTF8))
                 {
                     writer.WriteLine(tempNotiz);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Fehler beim Schreiben: ");
+            }
+        }
+
+        public void ChangingCustomerMoney(int customerIndex, int money)
+        {
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(fileName, true, Encoding.UTF8))
+                {
+                    List<string> list = new List<string>();
+                    using (StreamReader reader = new StreamReader(fileName, Encoding.UTF8))
+                    {
+                        while (!reader.EndOfStream)
+                        {
+                            list.Add(reader.ReadLine());
+                        }
+                    }
+                    string[] temp = list[customerIndex].Split(';');
+                    list[customerIndex] = temp[0] + ";" + temp[1] + ";" + temp[2] + ";" + money;
+                    ClearCsvFile(fileName);
+
+                    for(int i = 0; i < list.Count; i++)
+                    {
+                        writer.WriteLine(list[i]);
+                    }
                 }
             }
             catch (Exception ex)
@@ -64,6 +93,18 @@ namespace Bankautomat
             catch (Exception ex)
             {
                 MessageBox.Show("Fehler beim Lesen der CSV-Datei: " + ex.Message);
+            }
+        }
+        public void ClearCsvFile(string fileName)
+        {
+            try
+            {
+                // Überschreibe den Inhalt der Datei mit einem leeren String
+                File.WriteAllText(fileName, string.Empty);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Fehler beim Löschen des Inhalts der CSV-Datei: " + ex.Message);
             }
         }
 
