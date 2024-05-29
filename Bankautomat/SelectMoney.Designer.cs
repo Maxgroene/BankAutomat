@@ -66,6 +66,7 @@
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
+            btTakeOff = new Button();
             pMinus.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -305,9 +306,9 @@
             lbMoneySum.AutoSize = true;
             lbMoneySum.Location = new Point(354, 484);
             lbMoneySum.Name = "lbMoneySum";
-            lbMoneySum.Size = new Size(103, 25);
+            lbMoneySum.Size = new Size(82, 25);
             lbMoneySum.TabIndex = 12;
-            lbMoneySum.Text = "MoneySum";
+            lbMoneySum.Text = "Sum: 0 €";
             // 
             // panel2
             // 
@@ -466,11 +467,22 @@
             label3.TabIndex = 14;
             label3.Text = "number of:";
             // 
+            // btTakeOff
+            // 
+            btTakeOff.Location = new Point(463, 484);
+            btTakeOff.Name = "btTakeOff";
+            btTakeOff.Size = new Size(112, 34);
+            btTakeOff.TabIndex = 14;
+            btTakeOff.Text = "take off";
+            btTakeOff.UseVisualStyleBackColor = true;
+            btTakeOff.Click += btTakeOff_Click;
+            // 
             // SelectMoney
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 532);
+            Controls.Add(btTakeOff);
             Controls.Add(panel2);
             Controls.Add(lbMoneySum);
             Controls.Add(panel1);
@@ -530,5 +542,6 @@
         private TextBox tbNumber200;
         private TextBox tbNumber500;
         private Label label10;
+        private Button btTakeOff;
     }
 }

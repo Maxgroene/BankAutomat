@@ -23,7 +23,7 @@ namespace Bankautomat
 
             SetTextBox0();
             SetLabels();
-            
+
         }
 
         private void btMinus5_Click(object sender, EventArgs e)
@@ -170,7 +170,7 @@ namespace Bankautomat
         }
         void ChangingLbSum()
         {
-            lbMoneySum.Text = "Sum: " + (Convert.ToInt32(tbNumber5.Text) * 5 + Convert.ToInt32(tbNumber10.Text) * 10 
+            lbMoneySum.Text = "Sum: " + (Convert.ToInt32(tbNumber5.Text) * 5 + Convert.ToInt32(tbNumber10.Text) * 10
                 + Convert.ToInt32(tbNumber20.Text) * 20 + Convert.ToInt32(tbNumber50.Text) * 50
                 + Convert.ToInt32(tbNumber100.Text) * 100 + Convert.ToInt32(tbNumber200.Text) * 200
                 + Convert.ToInt32(tbNumber500.Text) * 500).ToString() + " €";
@@ -178,7 +178,7 @@ namespace Bankautomat
         }
         void CheckIfSmallerNull()
         {
-            if (Convert.ToInt32(tbNumber5.Text) < 0 ) { tbNumber5.Text = "0"; }
+            if (Convert.ToInt32(tbNumber5.Text) < 0) { tbNumber5.Text = "0"; }
             if (Convert.ToInt32(tbNumber10.Text) < 0) { tbNumber10.Text = "0"; }
             if (Convert.ToInt32(tbNumber20.Text) < 0) { tbNumber20.Text = "0"; }
             if (Convert.ToInt32(tbNumber50.Text) < 0) { tbNumber50.Text = "0"; }
@@ -190,6 +190,21 @@ namespace Bankautomat
         private void lbFirstName_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btTakeOff_Click(object sender, EventArgs e)
+        {
+            string[] money = lbMoneySum.Text.Split(' ');
+            if (Convert.ToInt32(money[1]) <= csv.Customer[CustomerIndex].Money)
+            {
+                csv.Customer[CustomerIndex].TakeOffMoney = Convert.ToInt32(money[1]);
+
+                MessageBox.Show("Die Transaktion war erfolgreich! \n sie haben:" + money[1] + "€ abgehoben");
+
+                SetLabels();
+                SetTextBox0();
+                ChangingLbSum();
+            }
         }
     }
 }
