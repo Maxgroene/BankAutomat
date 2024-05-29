@@ -18,8 +18,12 @@ namespace Bankautomat
         {
             this.CustomerIndex = customerIndex;
 
-            SetTextBox0();
             InitializeComponent();
+            csv.Read();
+
+            //SetTextBox0();
+            SetLabels();
+            
         }
 
         private void btMinus5_Click(object sender, EventArgs e)
@@ -129,7 +133,7 @@ namespace Bankautomat
 
         void SetTextBox0()
         {
-            tbNumber5.Text = "0";
+            tbNumber5.Text = "1";
             tbNumber10.Text = "0";
             tbNumber20.Text = "0";
             tbNumber50.Text = "0";
@@ -142,6 +146,11 @@ namespace Bankautomat
             lbFirstName.Text = csv.Customer[CustomerIndex].FirstName;
             lbLastName.Text = csv.Customer[CustomerIndex].LastName;
             lbAccountBalance.Text = "Your Money: " + Convert.ToString(csv.Customer[CustomerIndex].Money) + " €";
+        }
+
+        private void lbFirstName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

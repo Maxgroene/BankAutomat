@@ -88,6 +88,7 @@
             lbFirstName.Size = new Size(92, 25);
             lbFirstName.TabIndex = 1;
             lbFirstName.Text = "FirstName";
+            lbFirstName.Click += lbFirstName_Click;
             // 
             // lbLastName
             // 

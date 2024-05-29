@@ -31,6 +31,9 @@ namespace Bankautomat
                 {
                     if (csv.Customer[i].Iban == tbIban.Text)
                     {
+                        SelectMoney selectMoney = new SelectMoney(i);
+                        selectMoney.Show();
+                        break;
                         
                     }
                 }
