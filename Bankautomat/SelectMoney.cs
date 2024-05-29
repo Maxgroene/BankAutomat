@@ -12,8 +12,13 @@ namespace Bankautomat
 {
     public partial class SelectMoney : Form
     {
-        public SelectMoney()
+        Csv csv = new Csv();
+        private int CustomerIndex;
+        public SelectMoney(int customerIndex)
         {
+            this.CustomerIndex = customerIndex;
+
+            SetTextBox0();
             InitializeComponent();
         }
 
@@ -120,6 +125,23 @@ namespace Bankautomat
         private void tbNumber500_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        void SetTextBox0()
+        {
+            tbNumber5.Text = "0";
+            tbNumber10.Text = "0";
+            tbNumber20.Text = "0";
+            tbNumber50.Text = "0";
+            tbNumber100.Text = "0";
+            tbNumber200.Text = "0";
+            tbNumber500.Text = "0";
+        }
+        void SetLabels()
+        {
+            lbFirstName.Text = csv.Customer[CustomerIndex].FirstName;
+            lbLastName.Text = csv.Customer[CustomerIndex].LastName;
+            lbAccountBalance.Text = "Your Money: " + Convert.ToString(csv.Customer[CustomerIndex].Money) + " €";
         }
     }
 }

@@ -35,12 +35,12 @@
             btMinus5 = new Button();
             label2 = new Label();
             pMinus = new Panel();
-            btMinus10 = new Button();
-            btMinus20 = new Button();
-            btMinus50 = new Button();
-            btMinus100 = new Button();
-            btMinus200 = new Button();
             btMinus500 = new Button();
+            btMinus200 = new Button();
+            btMinus100 = new Button();
+            btMinus50 = new Button();
+            btMinus20 = new Button();
+            btMinus10 = new Button();
             panel1 = new Panel();
             btPlus500 = new Button();
             btPlus200 = new Button();
@@ -51,21 +51,21 @@
             btPlus5 = new Button();
             lbMoneySum = new Label();
             panel2 = new Panel();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            tbNumber500 = new TextBox();
-            tbNumber200 = new TextBox();
-            tbNumber100 = new TextBox();
-            tbNumber50 = new TextBox();
-            tbNumber20 = new TextBox();
-            tbNumber10 = new TextBox();
             tbNumber5 = new TextBox();
+            tbNumber10 = new TextBox();
+            tbNumber20 = new TextBox();
+            tbNumber50 = new TextBox();
+            tbNumber100 = new TextBox();
+            tbNumber200 = new TextBox();
+            tbNumber500 = new TextBox();
+            label10 = new Label();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
             pMinus.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -122,7 +122,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(491, 63);
+            label2.Location = new Point(247, 100);
             label2.Name = "label2";
             label2.Size = new Size(92, 25);
             label2.TabIndex = 5;
@@ -137,65 +137,10 @@
             pMinus.Controls.Add(btMinus20);
             pMinus.Controls.Add(btMinus10);
             pMinus.Controls.Add(btMinus5);
-            pMinus.Location = new Point(67, 130);
+            pMinus.Location = new Point(214, 181);
             pMinus.Name = "pMinus";
             pMinus.Size = new Size(97, 298);
             pMinus.TabIndex = 6;
-            // 
-            // btMinus10
-            // 
-            btMinus10.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btMinus10.Location = new Point(19, 52);
-            btMinus10.Name = "btMinus10";
-            btMinus10.Size = new Size(56, 34);
-            btMinus10.TabIndex = 5;
-            btMinus10.Text = "-";
-            btMinus10.UseVisualStyleBackColor = true;
-            btMinus10.Click += btMinus10_Click;
-            // 
-            // btMinus20
-            // 
-            btMinus20.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btMinus20.Location = new Point(19, 92);
-            btMinus20.Name = "btMinus20";
-            btMinus20.Size = new Size(56, 34);
-            btMinus20.TabIndex = 6;
-            btMinus20.Text = "-";
-            btMinus20.UseVisualStyleBackColor = true;
-            btMinus20.Click += btMinus20_Click;
-            // 
-            // btMinus50
-            // 
-            btMinus50.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btMinus50.Location = new Point(19, 132);
-            btMinus50.Name = "btMinus50";
-            btMinus50.Size = new Size(56, 34);
-            btMinus50.TabIndex = 7;
-            btMinus50.Text = "-";
-            btMinus50.UseVisualStyleBackColor = true;
-            btMinus50.Click += btMinus50_Click;
-            // 
-            // btMinus100
-            // 
-            btMinus100.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btMinus100.Location = new Point(19, 172);
-            btMinus100.Name = "btMinus100";
-            btMinus100.Size = new Size(56, 34);
-            btMinus100.TabIndex = 8;
-            btMinus100.Text = "-";
-            btMinus100.UseVisualStyleBackColor = true;
-            btMinus100.Click += btMinus100_Click;
-            // 
-            // btMinus200
-            // 
-            btMinus200.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btMinus200.Location = new Point(19, 212);
-            btMinus200.Name = "btMinus200";
-            btMinus200.Size = new Size(56, 34);
-            btMinus200.TabIndex = 9;
-            btMinus200.Text = "-";
-            btMinus200.UseVisualStyleBackColor = true;
-            btMinus200.Click += btMinus200_Click;
             // 
             // btMinus500
             // 
@@ -208,6 +153,61 @@
             btMinus500.UseVisualStyleBackColor = true;
             btMinus500.Click += btMinus500_Click;
             // 
+            // btMinus200
+            // 
+            btMinus200.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btMinus200.Location = new Point(19, 212);
+            btMinus200.Name = "btMinus200";
+            btMinus200.Size = new Size(56, 34);
+            btMinus200.TabIndex = 9;
+            btMinus200.Text = "-";
+            btMinus200.UseVisualStyleBackColor = true;
+            btMinus200.Click += btMinus200_Click;
+            // 
+            // btMinus100
+            // 
+            btMinus100.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btMinus100.Location = new Point(19, 172);
+            btMinus100.Name = "btMinus100";
+            btMinus100.Size = new Size(56, 34);
+            btMinus100.TabIndex = 8;
+            btMinus100.Text = "-";
+            btMinus100.UseVisualStyleBackColor = true;
+            btMinus100.Click += btMinus100_Click;
+            // 
+            // btMinus50
+            // 
+            btMinus50.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btMinus50.Location = new Point(19, 132);
+            btMinus50.Name = "btMinus50";
+            btMinus50.Size = new Size(56, 34);
+            btMinus50.TabIndex = 7;
+            btMinus50.Text = "-";
+            btMinus50.UseVisualStyleBackColor = true;
+            btMinus50.Click += btMinus50_Click;
+            // 
+            // btMinus20
+            // 
+            btMinus20.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btMinus20.Location = new Point(19, 92);
+            btMinus20.Name = "btMinus20";
+            btMinus20.Size = new Size(56, 34);
+            btMinus20.TabIndex = 6;
+            btMinus20.Text = "-";
+            btMinus20.UseVisualStyleBackColor = true;
+            btMinus20.Click += btMinus20_Click;
+            // 
+            // btMinus10
+            // 
+            btMinus10.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btMinus10.Location = new Point(19, 52);
+            btMinus10.Name = "btMinus10";
+            btMinus10.Size = new Size(56, 34);
+            btMinus10.TabIndex = 5;
+            btMinus10.Text = "-";
+            btMinus10.UseVisualStyleBackColor = true;
+            btMinus10.Click += btMinus10_Click;
+            // 
             // panel1
             // 
             panel1.Controls.Add(btPlus500);
@@ -217,7 +217,7 @@
             panel1.Controls.Add(btPlus20);
             panel1.Controls.Add(btPlus10);
             panel1.Controls.Add(btPlus5);
-            panel1.Location = new Point(596, 130);
+            panel1.Location = new Point(505, 181);
             panel1.Name = "panel1";
             panel1.Size = new Size(97, 298);
             panel1.TabIndex = 11;
@@ -302,7 +302,7 @@
             // lbMoneySum
             // 
             lbMoneySum.AutoSize = true;
-            lbMoneySum.Location = new Point(596, 79);
+            lbMoneySum.Location = new Point(354, 484);
             lbMoneySum.Name = "lbMoneySum";
             lbMoneySum.Size = new Size(103, 25);
             lbMoneySum.TabIndex = 12;
@@ -325,127 +325,19 @@
             panel2.Controls.Add(label5);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label3);
-            panel2.Location = new Point(354, 91);
+            panel2.Location = new Point(332, 142);
             panel2.Name = "panel2";
             panel2.Size = new Size(158, 337);
             panel2.TabIndex = 13;
             // 
-            // label3
+            // tbNumber5
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(3, 9);
-            label3.Name = "label3";
-            label3.Size = new Size(100, 25);
-            label3.TabIndex = 14;
-            label3.Text = "number of:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(12, 51);
-            label4.Name = "label4";
-            label4.Size = new Size(32, 25);
-            label4.TabIndex = 15;
-            label4.Text = "5€";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(12, 91);
-            label5.Name = "label5";
-            label5.Size = new Size(42, 25);
-            label5.TabIndex = 16;
-            label5.Text = "10€";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(12, 131);
-            label6.Name = "label6";
-            label6.Size = new Size(42, 25);
-            label6.TabIndex = 17;
-            label6.Text = "20€";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(12, 171);
-            label7.Name = "label7";
-            label7.Size = new Size(42, 25);
-            label7.TabIndex = 17;
-            label7.Text = "50€";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(12, 211);
-            label8.Name = "label8";
-            label8.Size = new Size(52, 25);
-            label8.TabIndex = 18;
-            label8.Text = "100€";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(12, 251);
-            label9.Name = "label9";
-            label9.Size = new Size(52, 25);
-            label9.TabIndex = 19;
-            label9.Text = "200€";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(12, 291);
-            label10.Name = "label10";
-            label10.Size = new Size(52, 25);
-            label10.TabIndex = 20;
-            label10.Text = "500€";
-            // 
-            // tbNumber500
-            // 
-            tbNumber500.Enabled = false;
-            tbNumber500.Location = new Point(70, 291);
-            tbNumber500.Name = "tbNumber500";
-            tbNumber500.Size = new Size(67, 31);
-            tbNumber500.TabIndex = 21;
-            tbNumber500.TextChanged += tbNumber500_TextChanged;
-            // 
-            // tbNumber200
-            // 
-            tbNumber200.Enabled = false;
-            tbNumber200.Location = new Point(70, 251);
-            tbNumber200.Name = "tbNumber200";
-            tbNumber200.Size = new Size(67, 31);
-            tbNumber200.TabIndex = 22;
-            tbNumber200.TextChanged += tbNumber200_TextChanged;
-            // 
-            // tbNumber100
-            // 
-            tbNumber100.Enabled = false;
-            tbNumber100.Location = new Point(70, 211);
-            tbNumber100.Name = "tbNumber100";
-            tbNumber100.Size = new Size(67, 31);
-            tbNumber100.TabIndex = 23;
-            tbNumber100.TextChanged += tbNumber100_TextChanged;
-            // 
-            // tbNumber50
-            // 
-            tbNumber50.Enabled = false;
-            tbNumber50.Location = new Point(70, 171);
-            tbNumber50.Name = "tbNumber50";
-            tbNumber50.Size = new Size(67, 31);
-            tbNumber50.TabIndex = 24;
-            tbNumber50.TextChanged += tbNumber50_TextChanged;
-            // 
-            // tbNumber20
-            // 
-            tbNumber20.Enabled = false;
-            tbNumber20.Location = new Point(70, 131);
-            tbNumber20.Name = "tbNumber20";
-            tbNumber20.Size = new Size(67, 31);
-            tbNumber20.TabIndex = 25;
-            tbNumber20.TextChanged += tbNumber20_TextChanged;
+            tbNumber5.Enabled = false;
+            tbNumber5.Location = new Point(70, 51);
+            tbNumber5.Name = "tbNumber5";
+            tbNumber5.Size = new Size(67, 31);
+            tbNumber5.TabIndex = 27;
+            tbNumber5.TextChanged += tbNumber5_TextChanged;
             // 
             // tbNumber10
             // 
@@ -456,14 +348,122 @@
             tbNumber10.TabIndex = 26;
             tbNumber10.TextChanged += tbNumber10_TextChanged;
             // 
-            // tbNumber5
+            // tbNumber20
             // 
-            tbNumber5.Enabled = false;
-            tbNumber5.Location = new Point(70, 51);
-            tbNumber5.Name = "tbNumber5";
-            tbNumber5.Size = new Size(67, 31);
-            tbNumber5.TabIndex = 27;
-            tbNumber5.TextChanged += tbNumber5_TextChanged;
+            tbNumber20.Enabled = false;
+            tbNumber20.Location = new Point(70, 131);
+            tbNumber20.Name = "tbNumber20";
+            tbNumber20.Size = new Size(67, 31);
+            tbNumber20.TabIndex = 25;
+            tbNumber20.TextChanged += tbNumber20_TextChanged;
+            // 
+            // tbNumber50
+            // 
+            tbNumber50.Enabled = false;
+            tbNumber50.Location = new Point(70, 171);
+            tbNumber50.Name = "tbNumber50";
+            tbNumber50.Size = new Size(67, 31);
+            tbNumber50.TabIndex = 24;
+            tbNumber50.TextChanged += tbNumber50_TextChanged;
+            // 
+            // tbNumber100
+            // 
+            tbNumber100.Enabled = false;
+            tbNumber100.Location = new Point(70, 211);
+            tbNumber100.Name = "tbNumber100";
+            tbNumber100.Size = new Size(67, 31);
+            tbNumber100.TabIndex = 23;
+            tbNumber100.TextChanged += tbNumber100_TextChanged;
+            // 
+            // tbNumber200
+            // 
+            tbNumber200.Enabled = false;
+            tbNumber200.Location = new Point(70, 251);
+            tbNumber200.Name = "tbNumber200";
+            tbNumber200.Size = new Size(67, 31);
+            tbNumber200.TabIndex = 22;
+            tbNumber200.TextChanged += tbNumber200_TextChanged;
+            // 
+            // tbNumber500
+            // 
+            tbNumber500.Enabled = false;
+            tbNumber500.Location = new Point(70, 291);
+            tbNumber500.Name = "tbNumber500";
+            tbNumber500.Size = new Size(67, 31);
+            tbNumber500.TabIndex = 21;
+            tbNumber500.TextChanged += tbNumber500_TextChanged;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(12, 291);
+            label10.Name = "label10";
+            label10.Size = new Size(52, 25);
+            label10.TabIndex = 20;
+            label10.Text = "500€";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(12, 251);
+            label9.Name = "label9";
+            label9.Size = new Size(52, 25);
+            label9.TabIndex = 19;
+            label9.Text = "200€";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(12, 211);
+            label8.Name = "label8";
+            label8.Size = new Size(52, 25);
+            label8.TabIndex = 18;
+            label8.Text = "100€";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(12, 171);
+            label7.Name = "label7";
+            label7.Size = new Size(42, 25);
+            label7.TabIndex = 17;
+            label7.Text = "50€";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(12, 131);
+            label6.Name = "label6";
+            label6.Size = new Size(42, 25);
+            label6.TabIndex = 17;
+            label6.Text = "20€";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(12, 91);
+            label5.Name = "label5";
+            label5.Size = new Size(42, 25);
+            label5.TabIndex = 16;
+            label5.Text = "10€";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(12, 51);
+            label4.Name = "label4";
+            label4.Size = new Size(32, 25);
+            label4.TabIndex = 15;
+            label4.Text = "5€";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(3, 9);
+            label3.Name = "label3";
+            label3.Size = new Size(100, 25);
+            label3.TabIndex = 14;
+            label3.Text = "number of:";
             // 
             // SelectMoney
             // 
