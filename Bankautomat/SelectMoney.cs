@@ -199,12 +199,15 @@ namespace Bankautomat
             {
                 csv.Customer[CustomerIndex].TakeOffMoney = Convert.ToInt32(money[1]);
 
-                MessageBox.Show("Die Transaktion war erfolgreich! \n sie haben:" + money[1] + "€ abgehoben");
+                MessageBox.Show("Die Transaktion war erfolgreich! \n sie haben: " + money[1] + "€ abgehoben");
                 
                 SetLabels();
                 SetTextBox0();
                 ChangingLbSum();
                 csv.ChangingCustomerMoney(CustomerIndex, csv.Customer[CustomerIndex].Money);
+            } else
+            {
+                MessageBox.Show("Sie haben nicht genug geld auf ihrem Konto");
             }
         }
     }

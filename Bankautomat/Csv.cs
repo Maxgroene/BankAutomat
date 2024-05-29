@@ -46,24 +46,20 @@ namespace Bankautomat
         {
             try
             {
-                using (StreamWriter writer = new StreamWriter(fileName, true, Encoding.UTF8))
+                List<string> list = new List<string>();
+                using (StreamReader reader = new StreamReader(fileName, Encoding.UTF8))
                 {
-                    List<string> list = new List<string>();
-                    using (StreamReader reader = new StreamReader(fileName, Encoding.UTF8))
+                    while (!reader.EndOfStream)
                     {
-                        while (!reader.EndOfStream)
-                        {
-                            list.Add(reader.ReadLine());
-                        }
+                        list.Add(reader.ReadLine());
                     }
-                    string[] temp = list[customerIndex].Split(';');
-                    list[customerIndex] = temp[0] + ";" + temp[1] + ";" + temp[2] + ";" + money;
-                    ClearCsvFile(fileName);
-
-                    for(int i = 0; i < list.Count; i++)
-                    {
-                        writer.WriteLine(list[i]);
-                    }
+                }
+                string[] temp = list[customerIndex].Split(';');
+                list[customerIndex] = temp[0] + ";" + temp[1] + ";" + temp[2] + ";" + money;
+                ClearCsvFile(fileName);
+                for (int i = 0; i < list.Count; i++)
+                {
+                    Write(list[i]);
                 }
             }
             catch (Exception ex)
