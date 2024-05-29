@@ -69,7 +69,7 @@ namespace Bankautomat
 
         public void AddCustomers()
         {
-            Write(";Timo;Dummkopf;DE187;845");
+            Write("Timo;Dummkopf;DE187;845");
         }
     }
 }
