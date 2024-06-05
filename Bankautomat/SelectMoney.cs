@@ -14,7 +14,7 @@ namespace Bankautomat
     {
         DateTime saveNow = DateTime.Now;
         Csv csv = new Csv();
-        private int CustomerIndex;
+        int CustomerIndex;
         public SelectMoney(int customerIndex)
         {
             this.CustomerIndex = customerIndex;
@@ -199,7 +199,7 @@ namespace Bankautomat
             if (Convert.ToInt32(money[1]) <= csv.Customer[CustomerIndex].Money)
             {
                 csv.Customer[CustomerIndex].TakeOffMoney = Convert.ToInt32(money[1]);
-                string tempString = (CustomerIndex + ";" + money[1] + ";" + DateTime.Now.Date);
+                string tempString = (CustomerIndex + ";" + money[1] + ";" + DateTime.Now);
 
                 csv.Write(tempString, csv.TransactionCSV);
 
@@ -218,7 +218,7 @@ namespace Bankautomat
 
         private void btTransaction_Click(object sender, EventArgs e)
         {
-            Transaction transaction = new Transaction(0);
+            Transaction transaction = new Transaction(CustomerIndex);
             transaction.Show();
         }
     }
