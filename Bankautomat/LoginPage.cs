@@ -18,6 +18,11 @@ namespace Bankautomat
         {
             csv.Read(csv.CustomerCSV);
 
+            if (csv.Customer.Count <= 0)
+            {
+                csv.AddCustomers();
+            }
+
             InitializeComponent();
         }
 
