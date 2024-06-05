@@ -12,6 +12,7 @@ namespace Bankautomat
 {
     public partial class SelectMoney : Form
     {
+        DateTime saveNow = DateTime.Now;
         Csv csv = new Csv();
         private int CustomerIndex;
         public SelectMoney(int customerIndex)
@@ -19,7 +20,7 @@ namespace Bankautomat
             this.CustomerIndex = customerIndex;
 
             InitializeComponent();
-            csv.Read();
+            csv.Read(csv.CustomerCSV);
 
             SetTextBox0();
             SetLabels();
@@ -198,17 +199,27 @@ namespace Bankautomat
             if (Convert.ToInt32(money[1]) <= csv.Customer[CustomerIndex].Money)
             {
                 csv.Customer[CustomerIndex].TakeOffMoney = Convert.ToInt32(money[1]);
+                string tempString = (CustomerIndex + ";" + money[1] + ";" + DateTime.Now.Date);
+
+                csv.Write(tempString, csv.TransactionCSV);
 
                 MessageBox.Show("Die Transaktion war erfolgreich! \n sie haben: " + money[1] + "€ abgehoben");
-                
+
                 SetLabels();
                 SetTextBox0();
                 ChangingLbSum();
                 csv.ChangingCustomerMoney(CustomerIndex, csv.Customer[CustomerIndex].Money);
-            } else
+            }
+            else
             {
                 MessageBox.Show("Sie haben nicht genug geld auf ihrem Konto");
             }
+        }
+
+        private void btTransaction_Click(object sender, EventArgs e)
+        {
+            Transaction transaction = new Transaction(0);
+            transaction.Show();
         }
     }
 }

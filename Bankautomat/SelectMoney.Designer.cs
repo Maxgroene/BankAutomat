@@ -67,6 +67,7 @@
             label4 = new Label();
             label3 = new Label();
             btTakeOff = new Button();
+            btTransaction = new Button();
             pMinus.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -477,11 +478,22 @@
             btTakeOff.UseVisualStyleBackColor = true;
             btTakeOff.Click += btTakeOff_Click;
             // 
+            // btTransaction
+            // 
+            btTransaction.Location = new Point(617, 486);
+            btTransaction.Name = "btTransaction";
+            btTransaction.Size = new Size(171, 34);
+            btTransaction.TabIndex = 15;
+            btTransaction.Text = "Show Transactions";
+            btTransaction.UseVisualStyleBackColor = true;
+            btTransaction.Click += btTransaction_Click;
+            // 
             // SelectMoney
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 532);
+            Controls.Add(btTransaction);
             Controls.Add(btTakeOff);
             Controls.Add(panel2);
             Controls.Add(lbMoneySum);
@@ -543,5 +555,6 @@
         private TextBox tbNumber500;
         private Label label10;
         private Button btTakeOff;
+        private Button btTransaction;
     }
 }
