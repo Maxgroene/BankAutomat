@@ -16,7 +16,7 @@ namespace Bankautomat
         Csv csv = new Csv();
         public LoginPage()
         {
-            csv.Read();
+            csv.Read(csv.CustomerCSV);
 
             InitializeComponent();
         }
