@@ -35,9 +35,9 @@
             // 
             lbTransaction.FormattingEnabled = true;
             lbTransaction.ItemHeight = 25;
-            lbTransaction.Location = new Point(163, 101);
+            lbTransaction.Location = new Point(12, 12);
             lbTransaction.Name = "lbTransaction";
-            lbTransaction.Size = new Size(330, 179);
+            lbTransaction.Size = new Size(553, 229);
             lbTransaction.TabIndex = 0;
             lbTransaction.SelectedIndexChanged += lbTransaction_SelectedIndexChanged;
             // 
@@ -45,7 +45,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(586, 260);
             Controls.Add(lbTransaction);
             Name = "Transaction";
             Text = "Transaction";

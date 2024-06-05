@@ -111,7 +111,7 @@ namespace Bankautomat
                             break;
 
                         default:
-
+                            MessageBox.Show("Error");
                             break;
                     }
 

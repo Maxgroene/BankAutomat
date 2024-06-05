@@ -14,10 +14,12 @@ namespace Bankautomat
     {
         Csv csv = new Csv();
         List<string> customerTransaction = new List<string>();
+        int customerIndex;
         public Transaction(int customerIndex)
         {
+            this.customerIndex = customerIndex;
             InitializeComponent();
-            ShowCustomerTransaction(customerIndex);
+            ShowCustomerTransaction();
         }
 
         private void lbTransaction_SelectedIndexChanged(object sender, EventArgs e)
@@ -25,9 +27,10 @@ namespace Bankautomat
 
         }
 
-        private void ShowCustomerTransaction(int customerIndex)
+        private void ShowCustomerTransaction()
         {
-            customerTransaction.Clear();
+            /*customerTransaction.Clear();
+            csv.Read(csv.TransactionCSV);
 
             for (int i = 0; i < customerTransaction.Count; i++) {
                 string[] splittedTransaction = csv.Transaction[i].Split(";");
@@ -38,7 +41,9 @@ namespace Bankautomat
                         + "  Datum: "+ splittedTransaction[2]);
                 }
             }
-            lbTransaction.DataSource = customerTransaction;
+            lbTransaction.DataSource = customerTransaction; */
+
+            lbTransaction.DataSource = csv.Transaction;
         }
     }
 }
