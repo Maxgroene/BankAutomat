@@ -29,10 +29,11 @@ namespace Bankautomat
 
         private void ShowCustomerTransaction()
         {
-            /*customerTransaction.Clear();
             csv.Read(csv.TransactionCSV);
+            customerTransaction.Clear();
+            
 
-            for (int i = 0; i < customerTransaction.Count; i++) {
+            for (int i = 0; i < csv.Transaction.Count; i++) {
                 string[] splittedTransaction = csv.Transaction[i].Split(";");
 
                 if (splittedTransaction[0] == Convert.ToString(customerIndex))
@@ -41,9 +42,7 @@ namespace Bankautomat
                         + "  Datum: "+ splittedTransaction[2]);
                 }
             }
-            lbTransaction.DataSource = customerTransaction; */
-
-            lbTransaction.DataSource = csv.Transaction;
+            lbTransaction.DataSource = customerTransaction; 
         }
     }
 }
