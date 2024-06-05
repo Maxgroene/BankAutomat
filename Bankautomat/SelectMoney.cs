@@ -199,8 +199,8 @@ namespace Bankautomat
             if (Convert.ToInt32(money[1]) <= csv.Customer[CustomerIndex].Money)
             {
                 csv.Customer[CustomerIndex].TakeOffMoney = Convert.ToInt32(money[1]);
-                string tempString = (csv.Customer[CustomerIndex].FirstName + ";" + csv.Customer[CustomerIndex].LastName 
-                    + ";" + money[1] + ";" + DateTime.Now);
+                string tempString = (CustomerIndex + ";" + money[1] + ";" + DateTime.Now.Date);
+
                 csv.Write(tempString, csv.TransactionCSV);
 
                 MessageBox.Show("Die Transaktion war erfolgreich! \n sie haben: " + money[1] + "€ abgehoben");
